@@ -48,7 +48,7 @@ def birthday(users):
     for user in users:
         date_clear = datetime.strptime(user["birthday"], "%Y-%m-%d")
         date_clear = date_clear.date()
-        date_clear.replace(year=current_time.year)
+        date_clear = date_clear.replace(year=current_time.year)
         if current_time <= date_clear <= time_end:
             #тут мабуть можна зробити все в 2 рази коротше
             if date_clear.weekday() == 0:
